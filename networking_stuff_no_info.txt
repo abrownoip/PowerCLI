@@ -1,4 +1,3 @@
-﻿{
 ### Get datacenters that haven't been migrated ###
 $datacenters = (Get-Datacenter -Server <server> | Where-Object {$_.Name -NotMatch "x_" -and $_.Name -notmatch "X"}).Name
 
