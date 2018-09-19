@@ -1,5 +1,23 @@
+### REVISING/EDITING DON'T RUN ###
+
+### Algorithm ###
+# Import required modules
+# Declare and assign variables needed in global scope
+# Connect to the old and new vCenter Servers
+# Grab all the old datacenters
+
+#Functions
+
+### Variable declaration and assignment ###
+$oldViServer = Read-Host "Enter the old vCenter Server: "
+$newViServer = Read-host "Enter the new vCenter Server: "
+$oldDatacenters
+$newDatacenters
+
 ### Get datacenters that haven't been migrated ###
-$datacenters = (Get-Datacenter -Server <server> | Where-Object {$_.Name -NotMatch "x_" -and $_.Name -notmatch "X"}).Name
+
+$oldDatacenters = Get-Datacenter -Server $oldViServer
+$oldDatacenterNames = $oldDatacenters.Name
 
 ### Making Switches ###
 foreach($datacenter in $datacenters)
